@@ -2,7 +2,7 @@
   "name": "bring-it-up",
   "version": "1.0.0",
   "description": "",
-  "author": "Andrey Kudinov",
+  "author": "Kirill Golygin",
   "license": "ISC",
   "browserslist": [
     "> 1%",
@@ -14,6 +14,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.7.2"
+    "vite": "^4.3.5"
   }
 }
