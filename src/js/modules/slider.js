@@ -14,6 +14,16 @@ export class Slider {
         if (n < 1) {
             this.slideIndex = this.slides.length;
         }
+
+        if(this.hanson) {
+            this.hanson.style.opacity = 0;
+            if (n === 3) {
+                setTimeout(() => {
+                    this.hanson.style.opacity = 1;
+                    this.hanson.classList.add('animated', 'slideInUp');
+                }, 3000);
+            }
+        } 
        
        for (let slide of this.slides) {
         slide.style.display = 'none';
@@ -27,6 +37,8 @@ export class Slider {
     }
 
     render() {
+        this.hanson = document.querySelector('.hanson');
+
         this.btns.forEach(btn => {
             btn.addEventListener('click', () => {
                 this.plusSlides(1);
