@@ -1,8 +1,8 @@
 import { Slider } from "./slider";
 
 export class MiniSlider extends Slider {
-    constructor(container, next, prev, activeClass, animate, autoPlay) {
-        super(container, next, prev, activeClass, animate, autoPlay);
+    constructor(obj) {
+        super(obj);
     }
 
     decorizeSlides() {
@@ -39,12 +39,14 @@ export class MiniSlider extends Slider {
 
         if(this.prev) {
             this.prev.addEventListener('click', () => {
-                
+                let active;
                 if(this.slides[this.slides.length - 1].nodeName === 'BUTTON') {
-                    const active = this.slides[this.slides.length - 3];
-                    this.container.insertBefore(active, this.slides[0]);
-                    this.decorizeSlides();
-                } 
+                    active = this.slides[this.slides.length - 3];
+                }  else {
+                    active = this.slides[this.slides.length - 1];
+                }
+                this.container.insertBefore(active, this.slides[0]);
+                this.decorizeSlides();
             });
         }
     }
