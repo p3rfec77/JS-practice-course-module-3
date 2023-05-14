@@ -1,4 +1,4 @@
-import { MainSlider, MiniSlider, VideoPlayer } from "./modules";
+import { MainSlider, MiniSlider, VideoPlayer, Difference } from "./modules";
 
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
@@ -37,4 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
         activeClass: 'feed__item-active'
     });
     feedSlider.init();
+
+    const difference = new Difference({
+        oldOfficer: '.officerold',
+        newOfficer: '.officernew',
+        cards: '.officer__card-item'
+    });
+    difference.init();
 });
