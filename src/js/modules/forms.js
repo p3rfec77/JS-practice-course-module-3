@@ -4,9 +4,9 @@ export class Form {
         this.inputs = document.querySelectorAll('input');
         this.path = url;
         this.message = {
-            loading: 'загрузка...',
-            success: 'Спасибо! Скоро мы с вами свяжемся',
-            failure: 'Что-то пошло не так...'
+            loading: 'loading...',
+            success: "Thank you! we'll call you soon",
+            failure: 'Something went wrong...'
         };
     }
 
