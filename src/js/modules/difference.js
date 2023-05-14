@@ -2,6 +2,10 @@ export class Difference {
     constructor({oldOfficer, newOfficer, cards}) {
         this.oldOfficer = document.querySelector(oldOfficer);
         this.newOfficer = document.querySelector(newOfficer);
+        if(!this.oldOfficer || this.newOfficer) {
+            return;
+        }
+
         this.oldOfficerCards = this.oldOfficer.querySelectorAll(cards);
         this.newOfficerCards = this.newOfficer.querySelectorAll(cards);
         this.oldCounter = 0;
@@ -10,6 +14,10 @@ export class Difference {
     }
 
     hideCards(selector) {
+        if (!selector) {
+            return;
+        }
+
         selector.forEach((card, i, arr) => {
             if (i !== arr.length - 1) {
                 card.style.display = 'none';
@@ -18,6 +26,10 @@ export class Difference {
     }
 
     bindTriggers({container, cards, counter}) {
+        if(!container || !cards || !counter) {
+            return;
+        }
+        
         container.querySelector('.plus').addEventListener('click', () => {
             if(counter !== cards.length - 2) {
                 cards[counter].classList.add('animated', 'slideInLeft');
