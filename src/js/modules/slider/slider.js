@@ -9,6 +9,9 @@ export class Slider {
         autoPlay} = {}) {
 
         this.container = document.querySelector(container);
+        if(!this.container) {
+            return;
+        }
         this.slides = this.container.children;
         this.btns = document.querySelectorAll(btns);
         this.next = document.querySelector(next);
