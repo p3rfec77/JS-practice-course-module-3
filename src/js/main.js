@@ -1,4 +1,4 @@
-import { MainSlider, MiniSlider, VideoPlayer, Difference } from "./modules";
+import { MainSlider, MiniSlider, VideoPlayer, Difference, Form } from "./modules";
 
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
@@ -44,4 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
         cards: '.officer__card-item'
     });
     difference.init();
+
+    const form = new Form('https://server-for-training.onrender.com/api/data');
+    form.init();
 });
