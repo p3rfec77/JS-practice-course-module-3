@@ -18,9 +18,10 @@ export class Form {
 
     checkMailInputs() {
         const mailInputs = document.querySelectorAll('[type = "email"]');
+        const mailRegex = /[^a-z 0-9 @ \.]/ig; 
         mailInputs.forEach(mailinput => {
             mailinput.addEventListener('keypress', (e) => {
-                if (e.key.match(/[^a-z 0-9 @ \.]/ig)) {
+                if (e.key.match(mailRegex)) {
                     e.preventDefault();
                 }
             });
