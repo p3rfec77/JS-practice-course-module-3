@@ -1,4 +1,4 @@
-import { MainSlider, MiniSlider, VideoPlayer, Difference, Form } from "./modules";
+import { MainSlider, MiniSlider, VideoPlayer, Difference, Form, Accordion } from "./modules";
 
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
@@ -47,4 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const form = new Form('https://server-for-training.onrender.com/api/data');
     form.init();
+
+    new Accordion('.module__info-show', '.msg').init();
 });
