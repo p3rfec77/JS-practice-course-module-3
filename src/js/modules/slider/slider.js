@@ -4,6 +4,8 @@ export class Slider {
         btns = null,
         next = null,
         prev = null,
+        moduleNext = null,
+        modulePrev = null,
         activeClass = '-',
         animate,
         autoPlay} = {}) {
@@ -16,6 +18,8 @@ export class Slider {
         this.btns = document.querySelectorAll(btns);
         this.next = document.querySelector(next);
         this.prev = document.querySelector(prev);
+        this.moduleNext = document.querySelectorAll(moduleNext);
+        this.modulePrev = document.querySelectorAll(modulePrev);
         this.activeClass = activeClass;
         this.animate = animate;
         this.autoPlay = autoPlay;

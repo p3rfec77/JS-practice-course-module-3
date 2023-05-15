@@ -3,9 +3,17 @@ import { MainSlider, MiniSlider, VideoPlayer, Difference, Form } from "./modules
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
             container: '.page', 
-            btns: '.next'
+            btns: '.next',
         });
     slider.render();
+
+    const modulePagesSlider = new MainSlider({
+        container: '.moduleapp',
+        btns: '.next',
+        modulePrev: '.prevmodule',
+        moduleNext: '.nextmodule'
+    });
+    modulePagesSlider.render();
 
     const player = new VideoPlayer('.showup .play', '.overlay');
     player.init();
