@@ -1,4 +1,4 @@
-import { MainSlider, MiniSlider, VideoPlayer, Difference, Form, Accordion } from "./modules";
+import { MainSlider, MiniSlider, VideoPlayer, Difference, Form, Accordion, Download } from "./modules";
 
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
@@ -59,4 +59,6 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
 
     new Accordion('.module__info-show', '.msg').init();
+
+    new Download('.download').init();
 });

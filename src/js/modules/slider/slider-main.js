@@ -41,11 +41,13 @@ export class MainSlider extends Slider {
                 this.plusSlides(1);
             });
 
-            btn.parentNode.previousElementSibling.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.slideIndex = 1;
-                this.showSlides(this.slideIndex);
-            })
+            if( btn.parentNode.previousElementSibling.nodeName === 'A') {
+                btn.parentNode.previousElementSibling.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.slideIndex = 1;
+                    this.showSlides(this.slideIndex);
+                })
+            }
         });
 
         this.moduleNext.forEach(btn => {
